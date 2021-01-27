@@ -365,3 +365,9 @@ Check the [pseudocode.md](solution-code/pseudocode_solution.md) file in the solu
 * Questions?
 * Issues?
 * Feedback
+
+### Optional
+Practice your HTML/CSS knowledge
+
+* [Dash](https://dash.generalassemb.ly/projects)
+* [codecademy](https://www.codecademy.com/catalog/language/html-css)
