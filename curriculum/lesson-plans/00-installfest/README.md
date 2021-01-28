@@ -40,6 +40,7 @@ This course covers the fundamental concepts of JavaScript.
 * Location
 * Your Coding Experience
 * What you are looking to get out of this class?
+* Interests/Hobbies?
 
 ---
 <a name="fundamentals"></a>
