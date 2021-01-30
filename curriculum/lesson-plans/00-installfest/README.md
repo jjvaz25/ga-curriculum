@@ -54,8 +54,6 @@ Let's start by defining a few terms and situating JavaScript in the broader Web 
 * _Front-End Development_: The development of client / browser code (HTML, CSS, JS), i.e., what the user sees and interacts with.
 * _Back-End Development_ : The development of server-side code that handles such functions as routing, data handling, and databases (Ruby, Python, Java, Javascript), i.e., the “stuff behind the scenes” that makes Web applications work.
 
->Note: A good analogy here is to compare the Web app to a retail clothing store. The _Front-End_ is the store itself; the things you as the buyer interact with. The store has a thought-out layout and structure (ie; HTML), it looks great with lighting and styling (ie; CSS), and you can interact with it by trying on or purchasing clothes (ie; Javascript). All the things you don't see but which are critical to a functioning retail store are the _Back-End_; logistics for shipping products to the store, scheduling rosters for staff, handling finances with a bank, etc.
-
 In this class, you will be learning both functional and object-oriented programming (OOP). Understanding the core differences between these two programming paradigms is essential to understanding the concepts in this class and, ultimately, becoming a more efficient programmer.
 
 #### Object Oriented & Functional Programming
