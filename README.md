@@ -23,6 +23,6 @@ General Assembly's JavaScript Development course is made up of 20 lessons that a
 | Lesson 5 | [**Project 1 Lab:** Slackbot](curriculum/lesson-plans/05-in-class-lab) ||Lesson 15| [Intro to CRUD and Firebase](curriculum/lesson-plans/15-intro-to-crud-and-firebase) |
 | Lesson 6 | [Objects and JSON](curriculum/lesson-plans/06-objects-and-json/README.md) ||Lesson 16| [Deploying Your App](curriculum/lesson-plans/16-deploying-your-app/README.md) |
 | Lesson 7 | [Intro to DOM & jQuery](curriculum/lesson-plans/07-intro-to-dom-and-jquery/README.md)|| Lesson 17 |  [Instructor Student Choice](curriculum/lesson-plans/17-instructor-student-choice/README.md) |
-| Lesson 8 | [DOM & jQuery Continued](curriculum/lesson-plans/08-dom-and-jquery-continued/README.md) || Lesson 18 |[Lab Time](curriculum/lesson-plans/18-lab-time/README.md) |
+| Lesson 8 | [DOM/jQuery and Promises](curriculum/lesson-plans/08-dom-and-jquery-continued/README.md) || Lesson 18 |[Lab Time](curriculum/lesson-plans/18-lab-time/README.md) |
 | Lesson 9 | [AJAX and APIs](curriculum/lesson-plans/09-ajax-and-apis/README.md) ||**Project 3** |[Your Single Page App](curriculum/projects/unit4/project-04.md) |
 | Lesson 10| [Asynchronous JS and Callbacks](curriculum/lesson-plans/10-asynchronous-javascript-and-callbacks/README.md) | |Lesson 19| Final Project Presentations |
