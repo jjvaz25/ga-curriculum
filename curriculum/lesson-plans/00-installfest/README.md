@@ -143,41 +143,6 @@ We'll be using Slack to register attendance and communicate during class. Follow
 
 ---
 <a name="install2"></a>
-### GitHub
-
-We will be using the GitHub service to share some of our code. We will learn
-about the underlying technology of GitHub known as `git` in the next lesson.
-
-- Create an account at http://github.com
-- In a Terminal on your computer, run the following two commands:
-
-  ```bash
-  git config --global user.name "YOUR NAME"
-  git config --global user.email "YOUR EMAIL ADDRESS"
-  ```
-
-  (source: [GitHub](https://help.github.com/articles/set-up-git/))
-
-- Follow [these
-  instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-  to create a new _SSH Key_ (a special, very secure, key which allows your
-  laptop access to your github account without having to remember your github
-  password)
-- Add your new SSH Key to GitHub following [these
-  instructions](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-- Verify your key works by running the following:
-
-  ```bash
-  ssh git@github.com
-  ```
-  
-  You should see output similar to:
-  
-  ```
-  Hi <you>! You've successfully authenticated, but GitHub does not provide shell access.
-  Connection to github.com closed.
-  ```
-
 ### Brew, Git, Node, and Code Editors
 
 You will need to install certain tools that will be used throughout the course. The installation instructions vary depending on whether you have a Mac, Windows, or Linux machine.
@@ -285,6 +250,40 @@ Copy and paste the following two commands (separately) into your terminal. Repla
 
 Lets try to stick with some of the more popular text editors such as [Sublime Text](http://www.sublimetext.com/3) and is available for all platforms, but you are free to use any code editor you choose. Popular choices include [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) (all platforms) and [Atom](http://atom.io) (Mac and Windows).
 
+### GitHub
+
+We will be using the GitHub service to share some of our code. We will learn
+about the underlying technology of GitHub known as `git` in the next lesson.
+
+- Create an account at http://github.com
+- In a Terminal on your computer, run the following two commands:
+
+  ```bash
+  git config --global user.name "YOUR NAME"
+  git config --global user.email "YOUR EMAIL ADDRESS"
+  ```
+
+  (source: [GitHub](https://help.github.com/articles/set-up-git/))
+
+- Follow [these
+  instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+  to create a new _SSH Key_ (a special, very secure, key which allows your
+  laptop access to your github account without having to remember your github
+  password)
+- Add your new SSH Key to GitHub following [these
+  instructions](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+- Verify your key works by running the following:
+
+  ```bash
+  ssh git@github.com
+  ```
+  
+  You should see output similar to:
+  
+  ```
+  Hi <you>! You've successfully authenticated, but GitHub does not provide shell access.
+  Connection to github.com closed.
+  ```
 
 ### Helpful Debugging Tips
 
