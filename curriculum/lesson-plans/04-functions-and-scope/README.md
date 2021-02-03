@@ -456,7 +456,7 @@ Make sure the lesson objectives have been met.
 * [When Not to Use Arrow Functions](https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/#:~:text=An%20arrow%20function%20doesn't,that%20uses%20the%20arguments%20object.)
 
 ## Homework 3
-Javascript code challenges! There are 5 Javascript code challenges in the `/starter-code` directory under the file `homework3.js`. Remember to comment out the problems you finish so it does not accidentally interfere with the question you are currently working on.
+Javascript code challenges! There are 5 Javascript code challenges in the homework repository. Remember to comment out the problems you finish so it does not accidentally interfere with the question you are currently working on.
 
 ## Homework 1
 Remember Homework 1? With the new found knowledge of `document.getElementById()`, you will now be able to complete it. It might take a little bit of research on how to edit HTML with JS but thats part of the learning process! Give it a shot!
