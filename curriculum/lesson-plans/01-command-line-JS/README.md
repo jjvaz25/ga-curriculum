@@ -331,6 +331,33 @@ Sometimes we make mistakes on what we push up. To undo a commit and reset it bac
   ```bash
   $ git push -f origin master
   ```
+
+**Git Warnings:**
+
+If you happen to get this warning:
+```
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+```
+
+You can simply run the command to stop seeing this warning:
+```
+git config pull.ff true
+```
+More on this here: https://stackoverflow.com/questions/62653114/how-to-deal-with-this-git-warning-pulling-without-specifying-how-to-reconcile
+
+
+
 ---
 
 <a name="codealong3"></a>
