@@ -10,7 +10,7 @@
 | 20 min | [Codealong](#codealong4)  | Accessing Values in Arrays |
 | 25 min | [Codealong](#codealong5) | Array Helper Methods |
 | 25 min | [Codealong](#codealong6) | Iterating through an Array |
-| 25 min | [Lab](#lab1) | Independent Practice For Arrays|
+| 25 min | [Lab](#lab1) | Practice For Arrays|
 | 10 min | [Lab](#lab2) | Homework: Mad Libs |
 | 5 min | [Conclusion](#conclusion) | Final Questions and Exit Tickets|
 
@@ -747,9 +747,9 @@ timesTen
 ```
 ---
 <a name="lab1"></a>
-## Arrays: Independent Practice
+## Arrays: Practice
 
-In the [starter code](starter-code/arrays.js), you'll find an array.js file. Use this to get some more practice in the console with arrays.
+In the [starter code](starter-code/arrays.js), you'll find an array.js file. Use this to get some more practice in the console with arrays. We will do this in pairs!
 
 ---
 <a name="lab2"></a>
