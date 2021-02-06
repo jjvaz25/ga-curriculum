@@ -485,29 +485,13 @@ const myModule2 = require('./modules/module2');
 
 Keep in mind we just did all this through Node. We actually don't have access to modules on the Frontend (browsers). We would need a JavaScript library or framework that enable module usage (for example, CommonJS, RequireJS, and more recently Webpack and Babel).
 
-## Bonus: Frontend ES6 Modules
+## Frontend ES6 Modules
 
 You can now use ES6 modules in all modern web browsers, with the downside that there isn't any cool "import from 3rd party library" functionality like you see in Node.
 
 Note that if you use the `type="module"` on a `script` tag, you'll want to run a simple server to avoid CORS issues. You can install a simple one with `npm install -g http-server` and then running `http-server` in the directory of your project. https://repl.it/~ (repl.it) runs the files as a server out of the box, so you can experiment with frontend ES6 imports/exports there too.
 
 Many boilerplate generators for popular projects like React come with a bundler out of the box.
-
-## Frontend ES6 Modules with Parcel
-
-To seamlessly include both 3rd party and your own custom modules in frontend JavaScript, you'll need a bundler. One such bundler is parcel: https://parceljs.org/.
-
-React, Vue, and many modern frameworks use a bundler of some sort.
-
-Check out the (starter-code/parcel) directory to see how this would work. This is derived from the boilerplate here: https://github.com/bradtraversy/vanilla-parcel-boilerplate. You can clone this boilerplate and work from it locally on your machine with `git clone https://github.com/bradtraversy/vanilla-parcel-boilerplate.git`.
-
-Let's post this somewhere in the template to verify that we can import 3rd party modules into frontend code seamlessly here:
-
-```js
-import axios from 'axios';
-
-axios.get( 'https:pokemon//pokeapi.co/api/v2/').then((data) => console.log(data));
-```
 
 ## Code organization Basics
 
@@ -543,6 +527,22 @@ Make sure class objectives have been met.
 3. Create an `index.html` and an `index.js`. Make sure to have a `script` tag with a `src` referencing `index.js` in your `index.html` file. The script tag must have `type="module"` for this to work.
 4. Create a `module.js` file as well. Inside this file include a function that logs "Hello World" to the console and remember to `export` this function. `import` this function into `index.js` and invoke it. You should see "Hello World" in your console. Do not add `module.js` to `index.html` with another `script` tag. 
 5. If you are working off your machine (and not repl.it), navigate to your project directory in the command line and run `http-server`. It will display the URL and port where you can see your page. You'll have to stop and start this anytime you make changes.
+
+## Bonus(Optional): Frontend ES6 Modules with Parcel
+
+To seamlessly include both 3rd party and your own custom modules in frontend JavaScript, you'll need a bundler. One such bundler is parcel: https://parceljs.org/.
+
+React, Vue, and many modern frameworks use a bundler of some sort.
+
+Check out the (starter-code/parcel) directory to see how this would work. This is derived from the boilerplate here: https://github.com/bradtraversy/vanilla-parcel-boilerplate. You can clone this boilerplate and work from it locally on your machine with `git clone https://github.com/bradtraversy/vanilla-parcel-boilerplate.git`.
+
+Let's post this somewhere in the template to verify that we can import 3rd party modules into frontend code seamlessly here:
+
+```js
+import axios from 'axios';
+
+axios.get('https:pokemon//pokeapi.co/api/v2/').then((data) => console.log(data));
+```
 
 
 #### Further Resources
