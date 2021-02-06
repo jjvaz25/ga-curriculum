@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Advanced APIs Lesson</title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="container-fluid text-center">
+    <h1>Local<span>Landscapes</span></h1>
+  </header>
+  <div class="container-fluid text-center hide" id="errorMessage">
+    <div class="alert alert-danger" role="alert"></div>
+  </div>
+  <div class="container-fluid text-center hide" id="loading-view">
+    <div class="alert alert-info" role="alert">
+      Loading...
+    </div>
+  </div>
+  <div class="container-fluid text-center" id="image-results-view">
+    <h3>Here are some landscape photos from Flickr near you:</h3>
+    <div class="images"></div>
+  </div>
+
+  <!-- js -->
+  <script src="index.js" type="module"></script>
+</body>
+</html>
