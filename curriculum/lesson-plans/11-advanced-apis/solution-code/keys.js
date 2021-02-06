@@ -1,1 +1,0 @@
-export const flickrApiKey = 'b11773c88cbf10fa5380ee5e9d240a80';
