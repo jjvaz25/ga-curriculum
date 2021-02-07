@@ -168,6 +168,8 @@ person.speak()
 <a name="lab1"></a>
 ## Rolling Dice: Lab (40 min)
 
+Lets work in pairs!
+
 For this lab, you'll be creating a page that displays a random update of two dice every time the user hits the "Roll Dice" button. To get started, open the [app.js file](starter-code/dice/js/app.js). Use the HTML and CSS code included in the starter code folder.
 
 ![](starter-code/dice/img/diceroller.png)
