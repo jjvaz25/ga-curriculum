@@ -2,6 +2,8 @@
 
 
 // 2. Help fill the array. Transfer all items out of the "remove" array and into the "fill"
+// Try it with a loop
+// Try it with an array method
 let remove = ['take', 'this', 'stuff', 'out'];
 let fill = [];
 
