@@ -4,6 +4,9 @@ let batman = ['batman', 'joker', 'dark knight', 'me'];
 console.log('C\'mon hit ' + batman[3]); // 'C'mon hit me'
 
 // 2. Help fill the array. Transfer all items out of the "remove" array and into the "fill"
+// Try it with a loop
+// Try it with an array method
+// Loop
 let remove = ['take', 'this', 'stuff', 'out'];
 let fill = [];
 let loopTimes = remove.length;
@@ -12,6 +15,14 @@ for(let i = 0; i < loopTimes; i++) {
   let item = remove.shift();
   fill.push(item);
 }
+
+// Array Method
+// fill = remove.slice();
+// remove= [];
+
+// ES6 method
+// fill = [...remove];
+// remove= [];
 
 console.log(remove, fill); // [], ['take', 'this', 'stuff', 'out']
 
@@ -30,7 +41,7 @@ console.log(emptyArr); // [6, 6, 6, 6, 6]
 
 // 4. Using a for loop, get the total of numbers 1 to 100
 let sum = 0;
-for(let i = 0; i < 101; i++) {
+for(let i = 1; i < 101; i++) {
   sum += i;
 }
 
