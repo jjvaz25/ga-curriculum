@@ -60,3 +60,114 @@ function isDivisible(n, x, y) {
 isDivisible(10, 2, 5)   // return true
 isDivisible(9, 2, 4)    // return false
 isDivisible(100, 20, 5) // return true
+
+
+
+// BONUS QUESTIONS:
+// 1. Write a function that determines the largest of 2 numbers
+function maxOfTwoNumbers(x, y) {
+  if (x >= y) {
+    return x;
+  } else {
+    return y;
+  }
+}
+
+// using ternary operator instead of if-else
+// function maxOfTwoNumbers(x, y) {
+//   return x >= y ? x : y;
+// }
+
+maxOfTwoNumbers(3, 9); // return 9
+
+
+
+// 2. Write a function that determines the largest of 3 numbers
+const maxOfThree = function(x, y, z) {
+  if (x >= y && x >= z) {
+    return x;
+  } else if (y >= x && y >= z) {
+    return y;
+  } else {
+    return z;
+  }
+};
+
+maxOfThree(5, 10, 1); // return 10
+
+// 3. Write a function that determines if the character provide is a vowel
+function isCharAVowel(s) {
+  s = s.toLowerCase();
+  return ('aeiouy'.indexOf(s) > -1);
+  // or use ES2015's string.includes
+  // return 'aeiouy'.includes(s);
+}
+
+isCharAVowel('b'); // return false
+
+
+// 4. Write a function that gets the product of all numbers multiplied in an array
+function multiplyArray(arr) {
+  let product = 1;
+  // feel free to use a for loop or forEach if you want to really be cool!
+  for (let i = 0; i < arr.length; i++) {
+    product *= arr[i];
+  }
+  return product;
+}
+
+multiplyArray([5, 10, 2]); // return 100
+
+// 5. Write a function that determines how many arguments are passed in
+const numArgs = function(...args) {
+  return args.length;
+  // or, without using a rest parameter
+  // return arguments.length;
+};
+
+numArgs('test', true, 5); // return 3
+
+// 6. Write a function that reverses a string
+function reverseString(s) {
+  // strings don't have a reverse method - but arrays do!
+  let arr = s.split('');
+  // let arr = Array.from(s);  <-- another way to create an array from an array-like object or iterable
+  return arr.reverse().join('');
+  // Yup, you can make it a one-liner if you wish
+  // return s.split('').reverse().join('');
+}
+
+reverseString('rockstar'); // return ratskcor
+
+// 7. Write a function that determines the longest string in an array and return the length of the string
+const longestStringInArray = function(arr) {
+  let longest = 0;
+  // using forEach this time!
+  arr.forEach(function(s) {
+    if (s.length > longest) longest = s.length;
+  });
+  return longest;
+  // The Array.reduce method is cool for when you want a single 'thing' from an array
+  // return arr.reduce(function(longestThusFar, currentStr) {
+  //   return currentStr.length > longestThusFar.length ? currentStr.length : longestThusFar.length;
+  // }, 0);
+};
+
+longestStringInArray(['say', 'hello', 'in', 'the', 'morning']); // return 7
+
+// 8. Write a function that takes an array and number. Return an array of strings that are longer than the provided number
+function stringsLongerThan(arr, len) {
+  // now we're talking!
+  return arr.filter(function(s) {
+    return (s.length > len);
+  });
+  // don't sweat it - we'll be covering array iterator methods like filter quite a bit in the course
+  // Without the filter method...
+  // const strings = [];
+  // arr.forEach(function(s) {
+  //   if (s.length > len) strings.push(s);
+  // });
+  // return strings;
+};
+
+stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); // return ["hello", "morning"]
