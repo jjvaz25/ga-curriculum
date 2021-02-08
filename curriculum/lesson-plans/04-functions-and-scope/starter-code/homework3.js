@@ -49,3 +49,62 @@ function isDivisible(n, x, y) {
 isDivisible(10, 2, 5)   // return true
 isDivisible(9, 2, 4)    // return false
 isDivisible(100, 20, 5) // return true
+
+// BONUS QUESTIONS:
+// 1. Write a function that determines the largest of 2 numbers
+function maxOfTwoNumbers(x, y) {
+   
+}
+
+maxOfTwoNumbers(3, 9); // return 9
+
+
+// 2. Write a function that determines the largest of 3 numbers
+const maxOfThree = function(x, y, z) {
+
+};
+
+maxOfThree(5, 10, 1); // return 10
+
+// 3. Write a function that determines if the character provide is a vowel
+function isCharAVowel(s) {
+
+}
+
+isCharAVowel('b'); // return false
+
+
+// 4. Write a function that gets the product of all numbers multiplied in an array
+function multiplyArray(arr) {
+
+}
+
+multiplyArray([5, 10, 2]); // return 100
+
+// 5. Write a function that determines how many arguments are passed in
+const numArgs = function(...args) {
+
+};
+
+numArgs('test', true, 5); // return 3
+
+// 6. Write a function that reverses a string
+function reverseString(s) {
+
+}
+
+reverseString('rockstar'); // return ratskcor
+
+// 7. Write a function that determines the longest string in an array and return the length of the string
+const longestStringInArray = function(arr) {
+
+};
+
+longestStringInArray(['say', 'hello', 'in', 'the', 'morning']); // return 7
+
+// 8. Write a function that takes an array and number. Return an array of strings that are longer than the provided number
+function stringsLongerThan(arr, len) {
+
+};
+
+stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); // return ["hello", "morning"]
