@@ -694,7 +694,7 @@ Review class objectives and the following questions:
 
 ### Homework 7: Create a Closure
 
-What better way to learn something than by doing it?! For the next 15 minutes, create a closure that will help you create colored sticky notes dynamically in your DOM with the click of a button. The results should look something like:
+What better way to learn something than by doing it?! Create a closure that will help you create colored sticky notes dynamically in your DOM with the click of a button. The results should look something like:
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/30342l3m3N151L442S1Z/Image%202015-12-03%20at%207.23.15%20PM.png)
 
