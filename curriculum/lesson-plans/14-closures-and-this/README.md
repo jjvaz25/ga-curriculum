@@ -698,7 +698,7 @@ What better way to learn something than by doing it?! For the next 15 minutes, c
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/30342l3m3N151L442S1Z/Image%202015-12-03%20at%207.23.15%20PM.png)
 
-The starter files are in [starter-code/sticky-notes](starter-code/stickynotes).
+The starter files are in [starter-code/sticky-notes](starter-code/sticky-notes).
 
 The CSS is all setup for you in the start index.html, but you will have to add:
 
