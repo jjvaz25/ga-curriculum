@@ -196,7 +196,7 @@ Variables are used to store data types in a computer’s memory, so that they ca
 
 We declare new variables in JavaScript using the [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var "/en/JavaScript/Reference/Statements/var"), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) keyword.
 
-If you declare a variable without assigning a value to it, its type will be `undefined.`s
+If you declare a variable without assigning a value to it, its type will be `undefined.`
 
 ```javascript
 var a;
