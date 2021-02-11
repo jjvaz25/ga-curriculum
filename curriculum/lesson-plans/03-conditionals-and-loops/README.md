@@ -5,8 +5,8 @@
 | 15 min | [Opening](#opening) | Conditional Statements |
 | 20 min | [Codealong](#codealong1) | Comparison Operators |
 | 15 min | [Codealong](#codealong2)| Truthy and Falsy |
-| 20 min | [Codealong](#codealong3)| Boolean/Logical Operators |
-| 20 min | [Lab](#practice1) | Independent Practice |
+| 25 min | [Codealong](#codealong3)| Boolean/Logical Operators |
+| 15 min | [Lab](#practice1) | Independent Practice |
 | 20 min | [Codealong & Independent Practice](#codealong4) | Switch Statements |
 | 10 min | [Codealong](#codealong5) | While & Do-While |
 | 15 min | [Codealong](#codealong6) | Iteration |
@@ -78,7 +78,7 @@ if (0 > 1) {
 When you need to test more than one case, you may use `else if`:
 
 ```javascript
-var name = "kittens";
+let name = "kittens";
 if (name === "puppies") {
   name += "!";
 } else if (name === "kittens") {
@@ -220,7 +220,7 @@ However, there are some situations when `===` does not behave as we expect it to
 
 ```javascript
 {} === {}
-//=> Uncaught SyntaxError: Unexpected token ===
+//=> false
 
 [] === []
 //=> false
@@ -234,6 +234,25 @@ However, there are some situations when `===` does not behave as we expect it to
 The examples in the second set fail equality tests because both **object literals** and **arrays** are objects, not just "primitive" values like strings, numbers, and Booleans. Objects and arrays are complex collections of values, and when we refer to them, we're actually referencing where they live in memory. That's why we call them "reference types." Strings and numbers are "value types."
 
 What does this all mean? When we attempt to compare two objects or arrays with `===`, JavaScript doesn't care if they look like similar collections. It only compares whether or not they are the exact same object in memory. In each case above, checking for equality is actually comparing two objects that are in two different places in memory. They're not exactly "the same."
+
+Example of comparing similar objects:
+```js
+let arr1 = { key: 'some value' };
+let arr2 = { key: 'some value' };
+
+arr2 === arr1
+// false
+```
+
+Example of comparing object reference:
+```js
+let arr1 = { key: 'some value' };
+let arr2 = arr1; // this creates a reference to arr1 NOT a copy
+
+arr2 === arr1
+// true
+```
+
 
 #### != and !==
 
@@ -295,7 +314,7 @@ There is a simple way of verifying the 'truthyness' or 'falseyness' of a value. 
 
 <a name="codealong3"></a>
 
-## Boolean and Logical Operators (20 min)
+## Boolean and Logical Operators (25 min)
 
 When you feed Boolean values of `true` or `false` into logical operators, they will  return `true` or `false` based on a few rules.
 
@@ -358,7 +377,12 @@ The `!` takes a value and returns the opposite Boolean value:
 This means that the execution of the second operand is dependent on the execution of the first. This is useful for checking for null objects before accessing their attributes:
 
 ```javascript
+let person;
 let name = person && person.name;
+// name will have the value of undefined
+
+let name = person.name;
+// Uncaught TypeError: Cannot read property 'name' of undefined
 ```
 
 In this case, if the first operand `person` is `undefined`, which is falsey, the second operand `person.name` will not be evaluated. The expression basically says, "We already know the whole `&&` expression is false, because `person` is falsey. Why bother dealing with the second operand?"
@@ -366,7 +390,8 @@ In this case, if the first operand `person` is `undefined`, which is falsey, the
 Short-circuit logic is also useful for setting default values:
 
 ```javascript
-let name = person.name || "Bobby Default";
+let person;
+let name = person || "Bobby Default";
 ```
 
 In this case, if the first operand `person.name` turns out to be falsey for any reason (probably because it's undefined or it's an empty string), `"Bobby Default"` will be returned. If `person.name` is truthy (probably because it's a non-empty string), it will be returned, and the second operand won't be evaluated. The expression basically says, "We already know the whole `||` expression is true, because `person.name` is truthy. Why bother dealing with the second operand?"
@@ -377,7 +402,7 @@ Further reference: [Mozilla Developer Network article on Logical operators](http
 ---
 
 <a name="practice1"></a>
-## Independent Practice (20 min)
+## Independent Practice (15 min)
 
 When programming user interfaces, you will often need to display results based on a certain input. In this exercise, help the students design a program that will let users know what legal privileges U.S. citizens enjoy based on their age.
 
@@ -393,11 +418,10 @@ Write a program that outputs results based on users’ age. This exercise draws 
 
 Have the program print out only the most recent thing that they've become eligible to do, i.e. if they are 46, only print "You can run for president." (This will at least force them to use `else if` instead of just `if`).
 
-Students can work in pairs to complete the exercise. Check out the solution below.
-
 Note: If you are outside the U.S., adjust the conditions above to reflect the laws in your country.
 
-**Solution**
+<details close>
+<summary><b>Solution</b></summary>
 
 ```javascript
 let age = 25;
@@ -423,6 +447,7 @@ if (age < 16) {
 => You can rent a car!
 ```
 
+</details>
 ---
 <a name="codealong4"></a>
 ## Switch Statements (20 min)
@@ -715,18 +740,20 @@ Open the [fizzbuzz.js](starter-code/fizzbuzz.js) to get started. After reading t
 
 
 ##### Step 1:
-
-Construct a for loop that iterates through, and `console.log()`'s out, numbers 1 - 100:
+<details close>
+<summary>Construct a for loop that iterates through, and <code>console.log()</code>'s out, numbers 1 - 100:</summary>
 
 ```javascript
 for (let num = 1; num <= 100; num++) {
   console.log(num);
 }
 ```
+</details>
 
 ##### Step 2:
 
-Add an if/else statement that logs the string `"fizz"` if the value being iterated over is divisible by `3`; otherwise, log out the value:
+<details close>
+<summary>Add an if/else statement that logs the string <code>"fizz"</code> if the value being iterated over is divisible by <code>3</code>; otherwise, log out the value:</summary>
 
 ```javascript
 for (let num = 1; num <= 100; num++) {
@@ -737,10 +764,12 @@ for (let num = 1; num <= 100; num++) {
   }
 }
 ```
+</details>
 
 ##### Step 3:
 
-Add an `else if` clause that logs the string `"buzz"` if the value being iterated over is divisible by `5`:
+<details close>
+<summary>Add an <code>else if</code> clause that logs the string <code>"buzz"</code> if the value being iterated over is divisible by <code>5</code>:</summary>
 
 ```javascript
 for (let num = 1; num <= 100; num++) {
@@ -753,10 +782,12 @@ for (let num = 1; num <= 100; num++) {
   }
 }
 ```
+</details>
 
 ##### Step 4:
 
-Add an additional `else if` clause that logs the string `"fizzbuzz"` if the value being iterated over is divisible by both `3` and `5`. __Note:__ this step is intentionally broken! Why is the `fizzbuzz` evaluation never done?
+<details close>
+<summary>Add an additional <code>else if</code> clause that logs the string <code>"fizzbuzz"</code> if the value being iterated over is divisible by both <code>3</code> and <code>5</code>. __Note:__ this step is intentionally broken! Why is the <code>fizzbuzz</code> evaluation never done?</summary>
 
 ```javascript
 for (let num = 1; num <= 100; num++) {
@@ -771,10 +802,12 @@ for (let num = 1; num <= 100; num++) {
   }
 }
 ```
+</details>
 
 ##### Step 5:
 
-Fix the above code to evaluate the `fizzbuzz` condition:
+<details close>
+<summary>Fix the above code to evaluate the <code>fizzbuzz</code> condition:</summary>
 
 ```javascript
 for (let num = 1; num <= 100; num++) {
@@ -789,6 +822,7 @@ for (let num = 1; num <= 100; num++) {
   }
 }
 ```
+</details>
 
 <a name="conclusion"></a>
 ## Conclusion (5 min)
