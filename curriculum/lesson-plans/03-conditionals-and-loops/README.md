@@ -789,7 +789,7 @@ for (let num = 1; num <= 100; num++) {
 ##### Step 4:
 
 <details close>
-<summary>Add an additional <code>else if</code> clause that logs the string <code>"fizzbuzz"</code> if the value being iterated over is divisible by both <code>3</code> and <code>5</code>. __Note:__ this step is intentionally broken! Why is the <code>fizzbuzz</code> evaluation never done?</summary>
+<summary>Add an additional <code>else if</code> clause that logs the string <code>"fizzbuzz"</code> if the value being iterated over is divisible by both <code>3</code> and <code>5</code>. <i>Note:</i> this step is intentionally broken! Why is the <code>fizzbuzz</code> evaluation never done?</summary>
 
 ```javascript
 for (let num = 1; num <= 100; num++) {
