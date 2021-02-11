@@ -10,7 +10,7 @@
 | 20 min | [Codealong & Independent Practice](#codealong4) | Switch Statements |
 | 10 min | [Codealong](#codealong5) | While & Do-While |
 | 15 min | [Codealong](#codealong6) | Iteration |
-| 25 min | [Lab](#practice2) | Fizzbuzz Code Challenge|
+| 25 min | [Lab](#practice2) | Fizzbuzz Code Challenge |
 | 5 min | [Conclusion](#conclusion) | Final Questions & Exit Tickets |
 
 
@@ -732,7 +732,9 @@ console.log(`I'm ${age} years old!`);
 
 <a name="practice2"></a>
 
-## Fizz Buzz: Independent Practice (25 min)
+## Fizz Buzz: Pairs (25 min)
+
+Lets work in pairs
 
 Relying on your new-found knowledge of loops and if/else statements, incrementally build the common Fizz buzz loop. Fizz buzz is a math game designed to teach the concept of division. Create a program that will iterate through numbers 1 to 100 and log each number in the console.
 
