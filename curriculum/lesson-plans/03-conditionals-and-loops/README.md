@@ -448,6 +448,7 @@ if (age < 16) {
 ```
 
 </details>
+
 ---
 <a name="codealong4"></a>
 ## Switch Statements (20 min)
