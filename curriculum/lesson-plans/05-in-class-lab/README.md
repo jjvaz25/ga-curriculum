@@ -50,7 +50,7 @@ First, let's define some terms we'll be using during this lab.
 <a name="lab1"></a>
 ## Hubot: Independent Practice (75 mins)
 
-We will be working in groups of 2
+We will be working in groups of 3
 
 ### Installing and Configuring Everything
 
