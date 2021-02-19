@@ -1,16 +1,16 @@
 /* Variables for random example */
-var btcRate = 300;
+var eurRate = 300;
 module.exports = function(robot) {
-  robot.respond(/convert (.*) to btc/i, function(msg) {
+  robot.respond(/convert (.*) to eur/i, function(msg) {
     var usd;
     usd = msg.match[1];
-    btc = usdToBTC(usd);
-    return msg.send(btc + " btc :moneybag:");
+    eur = usdToEUR(usd);
+    return msg.send(eur + " eur :moneybag:");
   });
 };
 
 
-function usdToBTC(usd) {
-  convertedBTC = usd / btcRate;
-  return convertedBTC;
+function usdToEUR(usd) {
+  convertedEUR = usd / eurRate;
+  return convertedEUR;
 }
