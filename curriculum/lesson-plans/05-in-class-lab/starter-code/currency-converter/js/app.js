@@ -1,4 +1,4 @@
-var btcRate;
-$.getJSON('https://api.bitcoinaverage.com/ticker/USD/', function(data) {
-  btcRate = data.last;
+$.getJSON('http://www.floatrates.com/daily/usd.json', function(data) {
+  console.log(data);
+  console.log(data.eur.rate);
 });
