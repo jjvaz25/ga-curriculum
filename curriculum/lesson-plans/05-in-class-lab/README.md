@@ -50,7 +50,7 @@ First, let's define some terms we'll be using during this lab.
 <a name="lab1"></a>
 ## Hubot: Independent Practice (75 mins)
 
-We will be working in groups of 3
+We will be working in groups of 2
 
 ### Installing and Configuring Everything
 
@@ -331,9 +331,9 @@ Make sure the lesson objectives have been met.
 
 # Bonus Content
 
-## Bitcoin: Currency Converter
+## Currency Converter
 
-We have provided you with starter code for grabbing the latest bitcoin trading price. Open the [starter code](starter-code/currency-converter). Based on the U.S. Dollar amount a user inputs, we should print out the corresponding value in bitcoin based on the last trading price.
+We have provided you with starter code for grabbing the latest bitcoin trading price. Open the [starter code](starter-code/currency-converter). Based on the U.S. Dollar amount a user inputs, we should print out the corresponding value in **Euros** based on the last trading price.
 
 Remember to use [document.getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) to target HTML elements on screen
 
@@ -348,20 +348,20 @@ Before writing any code, be sure to write down the pseudocode for the exercise.
 * function convert
 	store the inputted value into a variable
 	parse the inputted value
-	call `usdtoBTC` function and pass the user inputted value
+	call `usdtoEUR` function and pass the user inputted value
 	display converted amount
 
- * function usdToBTC
-	 var convertedBTC = usd/BTCrate
-	 return convertedBTC
+ * function usdtoEUR
+	 var convertedEUR = usd/EURrate
+	 return convertedEUR
 
   ```
 
-##  Hubot Part 2: Bitcoin Convertor Bot
+##  Hubot Part 2: Euro Convertor Bot
 
-  Build a Hubot that can convert a requested amount in $USD to its equivalent value in Bitcoin. You may use a constant, fixed price instead of the live rate of BTC price.
+  Build a Hubot that can convert a requested amount in $USD to its equivalent value in Euro. You may use a constant, fixed price instead of the live rate of Euro price.
 
-  When the Hubot participant enters "convert $X to btc", the bot should return the value in bitcoin.
+  When the Hubot participant enters "convert $X to euro", the bot should return the value in Euro.
 
   **Sample Hubot**
 
