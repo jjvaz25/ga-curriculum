@@ -153,7 +153,7 @@ To create instructions for your Hubot, you need to add a JavaScript file to the 
  In the example below, when the bot hears "Hello!", it will respond, "Hi there!":
 
  ```js
- bot.hear(/Hello!/, function(res) {
+ robot.hear(/Hello!/, function(res) {
    return res.send("Hi there!");
  });
  ```
@@ -168,7 +168,7 @@ To create instructions for your Hubot, you need to add a JavaScript file to the 
  `.respond` is similar to `.hear`, except it will only be triggered when someone specifically mentions the Hubot using `@`, or sends a direct message.
 
  ```javascript
- bot.respond(/What's your favorite food?/, function(res) {
+ robot.respond(/What's your favorite food?/, function(res) {
    return res.send("I'm a robot--I don't eat food!");
  });
  ```
@@ -191,8 +191,8 @@ The "send" method allows your Hubot to send a message to the channel, and the "r
  Would you like to accept user input in your script? Take a look at the example below:
 
  ```js
- bot.respond(/Hi Hubot! My name is (.*)/i, function(msg) {
-   var name;
+ robot.respond(/Hi Hubot! My name is (.*)/i, function(msg) {
+   let name;
    name = msg.match[1];
    if (name == "Hubot"){
      return msg.send("You're not Hubot--I'm Hubot!");
@@ -215,14 +215,14 @@ Now, let's dig into how the user input works. As you can see, we're using `.resp
 
  **Wait, What Does the `[1]` Mean?**
 
-`msg.match[1]` will grab the value corresponding to the second group `(.*)` in the expression. Just like most collections in JavaScript, this is a zero-based index. However, the first group is the entire expression. So in the example above, `msg.match[0]` will return the entire expression: `Hi Hubot! My name is Tim`. If you use multiple `(.*)`s within one RegEx statement, you can assign each of the values to different variables, such as: `var foo = msg.match[1]`, `var bar = msg.match[2]`.
+`msg.match[1]` will grab the value corresponding to the second group `(.*)` in the expression. Just like most collections in JavaScript, this is a zero-based index. However, the first group is the entire expression. So in the example above, `msg.match[0]` will return the entire expression: `Hi Hubot! My name is Tim`. If you use multiple `(.*)`s within one RegEx statement, you can assign each of the values to different variables, such as: `let foo = msg.match[1]`, `let bar = msg.match[2]`.
 
  Here's an example that uses two wildcards:
 
  ```js
- bot.respond(/add (.*) and (.*)/i, function(msg) {
-   var a;
-   var b;
+ robot.respond(/add (.*) and (.*)/i, function(msg) {
+   let a;
+   let b;
    a = parseInt(msg.match[1]);
    b = parseInt(msg.match[2]);
    c = a + b
@@ -238,8 +238,8 @@ Now, let's dig into how the user input works. As you can see, we're using `.resp
 
  Here's another example that uses a switch statement to handle different cases:
  ```js
- bot.respond(/what is your favorite (.*)/, function(msg) {
-   var fav;
+ robot.respond(/what is your favorite (.*)/, function(msg) {
+   let fav;
    fav = msg.match[1];
    console.log(fav);
    switch (fav) {
@@ -283,7 +283,7 @@ To wrap things up, here's one final example of an advanced Hubot that uses a Reg
 ```js
 module.exports = function(robot) {
     robot.respond(/is it a (weekend|holiday)\s?\?/i, function(msg){
-        var today = new Date();
+        let today = new Date();
 
         msg.reply(today.getDay() === 0 || today.getDay() === 6 ? "YES" : "NO");
     });
@@ -297,7 +297,7 @@ module.exports = function(robot) {
     });
 
     robot.respond(/convert \$(.*) to btc/i, function(res){
-        var usd = res.match[1];
+        let usd = res.match[1];
         res.reply('That is about ' + usd * 0.0024 + ' in BTC');
     });
 
@@ -352,7 +352,7 @@ Before writing any code, be sure to write down the pseudocode for the exercise.
 	display converted amount
 
  * function usdtoEUR
-	 var convertedEUR = usd/EURrate
+	 let convertedEUR = usd/EURrate
 	 return convertedEUR
 
   ```
