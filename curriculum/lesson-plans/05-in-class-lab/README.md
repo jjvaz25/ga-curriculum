@@ -312,7 +312,7 @@ This should give you a sense of what a Hubot can do—and perhaps give you some 
 <a name="lab2"></a>
 ## Hubot: Unit 1 Project (90 mins)
 
-At this point, if your group has successfully managed to work through each of the examples, you should now be ready to tackle the Unit 1 Project. Here is the [Project 1 prompt](../../projects/unit1/project-01.md) and continue to work in groups. If all grpups are able to complete the project before class is over, we will present the project to the class. If there is still time left over, you can tackle the bonus exercises below. If your group is unable to complete the project before the end of class, you can finish it up and present at the next class.
+At this point, if your group has successfully managed to work through each of the examples, you should now be ready to tackle the Unit 1 Project. Navigate to the projects repository for more details and continue to work in groups. If all grpups are able to complete the project before class is over, we will present the project to the class. If there is still time left over, you can tackle the bonus exercises below. If your group is unable to complete the project before the end of class, you can finish it up and present at the next class.
 
 >Note: Students/groups should continue using the same Hubot/API token they used for the above examples.
 
