@@ -90,7 +90,7 @@ We can get and set object properties with either dot notation or square brackets
 
   myCar["num-of-wheels"]; // returns 4;
 
-  var numDoors = "doors";
+  let numDoors = "doors";
   myCar[numDoors]; // returns 2;
 ```
 
@@ -211,7 +211,7 @@ We have so far worked with **object properties**. However we have been setting t
 While working with objects, we will run to the keyword **this** quite often. We will cover **this** in much more detail later on in the unit, however it's important to understand in the context of our objects that **this** refers to the current object instance.
 
 ```js
-  var Superhero = function (firstName, superheroName) {
+  let Superhero = function (firstName, superheroName) {
     // Important to understand here that the object properties firstName and superheroName
     // are set through the this keyword with the value passed through the constructor function
     this.firstName = firstName;
@@ -219,7 +219,7 @@ While working with objects, we will run to the keyword **this** quite often. We 
     console.log('Superhero instantiated');
   };
 
-  var superman = new Superhero('Clark', 'Superman');
+  let superman = new Superhero('Clark', 'Superman');
   console.log(superman.firstNAme + ' is ' + superman.superheroName);
 ```
 
@@ -230,7 +230,7 @@ While working with objects, we will run to the keyword **this** quite often. We 
     console.log(this.firstName + ' is ' +this.superheroName);
   }
 
-  var superman = new Person('Clark', 'Superman');
+  let superman = new Person('Clark', 'Superman');
   superman.identity();
 ```
 
@@ -248,11 +248,9 @@ Much of the time, attributes can only reasonably contain certain values.  For in
 Person.prototype.setAge = function (newAge) {
   if (newAge < 0) {
     console.error("A person cannot be negative years old!");
-  }
-  else if (newAge > 150) {
+  } else if (newAge > 150) {
     console.error("People do not generally live to the age of 150");
-  }
-  else {
+  } else {
     this.age = newAge;
   }
 };
