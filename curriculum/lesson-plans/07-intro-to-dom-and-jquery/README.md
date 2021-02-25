@@ -37,9 +37,9 @@ The Document Object Model (DOM) is a programming interface for HTML [and XML] do
 
 So, the DOM is a (potential) large object that describes the structure of our content. Since it's an object, we can use normal techniques to get and set data! In the browser, the DOM is represented by the `document` object. JS specifies some built-in methods that make using the DOM easier. Take a minute to review the [summary of the DOM at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document). Pay particular attention to the following methods:
 
-- `Document.getElementById(String id)`
-- `Document.querySelector(String selector)`
-- `Document.querySelectorAll(String selector)`
+- `document.getElementById(String id)`
+- `document.querySelector(String selector)`
+- `document.querySelectorAll(String selector)`
 
 When reading these methods, try to get a sense of what they're trying to accomplish. We aren't going to ask you to memorize documentation. Don't worry about the details, since we're going to observe some examples.
 
@@ -139,7 +139,7 @@ Finally, we can set certain events to execute based on user interaction. A commo
     button.onclick = function(event) {
       // The preventDefault() method lets us disable the default action, allowing us to override with our on functionality.
       event.preventDefault();
-      MyApp.do_something("world");
+      MyApp.do_something('world');
     };
   };
 
@@ -148,7 +148,7 @@ Finally, we can set certain events to execute based on user interaction. A commo
   MyApp = {};
 
   MyApp.do_something = function(name) {
-    console.log("Hello " + name);
+    console.log('Hello ' + name);
   }
 ```
 ---
@@ -263,7 +263,7 @@ We can update the internal html of an element with the html() method. Whatever w
 ```js
   let $item = $('#item');
   // We can replace the content of the element either with text or with additional html.
-  let htmlContent = "<p>Hello world</p>";
+  let htmlContent = '<p>Hello world</p>';
   $item.html(htmlContent);
 ```
 
