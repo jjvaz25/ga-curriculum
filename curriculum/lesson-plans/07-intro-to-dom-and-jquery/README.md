@@ -43,7 +43,7 @@ So, the DOM is a (potential) large object that describes the structure of our co
 
 When reading these methods, try to get a sense of what they're trying to accomplish. We aren't going to ask you to memorize documentation. Don't worry about the details, since we're going to observe some examples.
 
-Each of these methods returns an element from the DOM. What can we do with an [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)? Let's write a few suggestions down on the board.
+Each of these methods returns an element from the DOM. What can we do with an [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)?
 
 ---
 <a name = "codealong1"></a>
@@ -128,7 +128,7 @@ Finally, we can set certain events to execute based on user interaction. A commo
 ```html
   <form>
     <input id="my-input" />
-    <input id="my-input-button" type="submit" value="Run button code"></submit>
+    <input id="my-input-button" type="submit" value="Run button code" />
   </form>
 ```
 
@@ -145,7 +145,7 @@ Finally, we can set certain events to execute based on user interaction. A commo
 
   // We can define things outside of the `window.onload` that are evaluated
   // only when called.
-  MyApp = {};
+  let MyApp = {};
 
   MyApp.do_something = function(name) {
     console.log('Hello ' + name);
