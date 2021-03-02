@@ -485,9 +485,15 @@ Ask students what was learned. Make sure the objectives have been met.
 * What is event delegation? Why would we use it?
 * What is a promise?
 
+### Homework
+
 For next class please head over to the [Open Weather](https://openweathermap.org/api) site and create an account. This will be for next class but it does take a couple hours for them to activate your account. This will allow us to do the next exercise for next class. 
 
 * Sign up and activate your account via an email they send!
+
+### More Practice
+* Feel free to take a look and do some code challenges in the homework repository
+* [More JS Practice](https://docs.google.com/spreadsheets/d/1VBmPcYn5prxNmoY7mHp-hgbzNX5Ey0KxC_VMtEwEWA8/edit?usp=sharing)
 
 #### Further Resources
 
