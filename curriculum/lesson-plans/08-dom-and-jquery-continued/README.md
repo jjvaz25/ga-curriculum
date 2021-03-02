@@ -128,7 +128,7 @@ Let's add a dash in front of every one of our list items (yes in addition to the
 ---
 
 <a name = "lab1"></a>
-## Appending: Independent Practice (30 mintutes)
+## Appending: Independent Practice (20 minutes)
 
 Open [the starter code](starter-code/event_delegation) and refactor it as follows: use event delegation so that you only have to set one event listener for all the items once - when the code first runs - and you don't have to add any others whenever someone adds an item.
 
@@ -276,7 +276,7 @@ console.log('2');
 Here is an example of using fetch:
 
 ```js
-const someUrl = 'https://pokeapi.co/api/v2/pokemon'
+const someUrl = 'https://pokeapi.co/api/v2/pokemon';
 
 fetch(someUrl)
  .then( res => res.json())
@@ -284,10 +284,10 @@ fetch(someUrl)
  .catch(err => console.log('err', err));
 ```
 
-Here is the equivalent written in the async/await try/catch style:
+Here is the equivalent written in the `async`/`await` `try`/`catch` style:
 
 ```js
-const someUrl = 'https://pokeapi.co/api/v2/pokemon'
+const someUrl = 'https://pokeapi.co/api/v2/pokemon';
 
 const fetchPokemon = async () => {
   try {
@@ -403,7 +403,7 @@ Promise.all([
 ```
 
 <a name = "promiseslab"></a>
-## Promise: Independent Practice (20 mins)
+## Promise: Independent Practice (30 mins)
 
 In groups of 2 work on the following:
 
@@ -445,9 +445,9 @@ Promise.all([
 });
 ```
 
-#### Additional Promise.all() Examples
+### Additional `Promise.all()` Examples
 
-##### Handling Multiple API Calls
+#### Handling Multiple API Calls
 
  In the below example the app first needs to pull mapping data so that a map can be rendered first and then specific location markers placed on the based on their lat/lon addresses. 
 
@@ -465,7 +465,7 @@ Promise.all([fetch(mapJSON), fetch(parks)])
     return Promise.all(
       responses.map(function(response) {
         return response.json();
-      })
+      });
     );
   })
   .then(function(files) {
