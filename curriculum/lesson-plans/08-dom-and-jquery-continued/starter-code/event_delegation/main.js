@@ -23,11 +23,6 @@ function addToList($list, thing) {
 function addCompleteLink($li) {
   let $completedLink = $('<span>').text(' Complete').addClass('complete-task');
   $li.append($completedLink);
-
-  // refactor
-  $completedLink.on('click', function(event) {
-    $li.addClass('completed');
-  });
 }
 
 $(document).ready(function() {
@@ -51,16 +46,8 @@ $(document).ready(function() {
     }
   });
 
-
-  // let source = $('#hello-world-template').html();
-  // let template = Handlebars.compile(source);
-
-  let source = $('#hello-world-template').html();
-  let template = Handlebars.compile(source);
-
-  let helloStatement = { helloTitle: "Hello world", helloContent: "GA JS class is just awesome"};
-
-  let compiledTemplate = template(helloStatement);
-  $('body').append(compiledTemplate);
-
+  // refactor
+  $things.on('click', function(event) {
+    $(this).addClass('completed');
+  });
 });
