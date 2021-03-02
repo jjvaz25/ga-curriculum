@@ -13,7 +13,7 @@ const result = fetch(someUrl)
   .catch(err => console.log('error', err));
 
 
-// async/away style
+// async/await style
 const someUrl = 'https://pokeapi.co/api/v2/pokemon';
 
 let asyncFunction = async function() {
