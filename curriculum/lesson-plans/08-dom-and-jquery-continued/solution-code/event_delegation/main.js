@@ -10,19 +10,23 @@ to set one event listener for all the items once, when the
 code first runs, and you don't have to add any others whenever
 someone adds an item.
 
-Bonus: When the user mouses over each item, the item should turn grey. Don't use CSS hovering for this.
 
 */
 
 function addToList($list, thing) {
   let $thingLi = $('<li>').html(thing).addClass('fav-thing');
-  addCompleteLink($thingLi);
+  addDeleteLink($thingLi);
   $list.append($thingLi);
 }
 
 function addCompleteLink($li) {
   let $completedLink = $('<span>').text(' Complete').addClass('complete-task');
   $li.append($completedLink);
+}
+
+function addDeleteLink($li) {
+  let $deleteLink = $('<span>').text(' Delete').addClass('delete');
+  $li.append($deleteLink);
 }
 
 $(document).ready(function() {
@@ -33,6 +37,7 @@ $(document).ready(function() {
 
   $things.toArray().forEach(function(li) {
     addCompleteLink($(li));
+    addDeleteLink($(li));
   });
 
   $button.on('click', function(event) {
@@ -46,10 +51,13 @@ $(document).ready(function() {
     }
   });
 
-  // refactor
-  $thingList.on('click', 'li', function(event) {
-    $(this).addClass('completed');
+  $thingList.on('click', '.fav-thing .complete-task', function(event) {
+    let $thingItem = $(event.target).parent();
+    $thingItem.addClass('completed');
   });
+
+
+  // Bonus: When the user mouses over each item, the rest of the list should turn grey. Don't use CSS hovering for this.
   $thingList.on('mouseenter mouseleave', 'li', function(event) {
     if (event.type == 'mouseenter') {
       $(this).removeClass('inactive');
@@ -58,5 +66,10 @@ $(document).ready(function() {
     } else if (event.type == 'mouseleave') {
       $(this).siblings().removeClass('inactive');
     }
+  });
+
+  // Bonus 2: Add another link, after each item, that allows you to delete the item.
+  $thingList.on('click', '.delete', function(e) {
+    $(e.target).parent('li').remove();
   });
 });
