@@ -222,7 +222,7 @@ See https://developer.mozilla.org/en-US/docs/Web/API/Response for more details o
 const url = 'https://pokeapi.co/api/v2/pokemon';
 
 // triggers 404
-const wrongUrl = 'https://pokeapi.co/api/v2/pokemon2'
+const wrongUrl = 'https://pokeapi.co/api/v2/pokemon2';
 
 const fetchThings = async () => {
   try {
@@ -300,13 +300,13 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 <a name = "lab1"></a>
 ## Consumer Finance Data: Independent Practice (30 min)
 
-- In the [`ajax_exercise/index.html`](starter-code/ajax_exercise/index.html) file there is a "Get Consumer Finance Data" button. When the user clicks the button, pull data from the provided link above (https://cors-anywhere.herokuapp.com/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/). Handle the link success and error responses accordingly, displaying results in console.log() if successful.
+- In the [`ajax_exercise/index.html`](starter-code/ajax_exercise/index.html) file there is a "Get Consumer Finance Data" button. When the user clicks the button, pull data from the provided link above (https://cors.bridged.cc/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/). Handle the link success and error responses accordingly, displaying results in console.log() if successful.
 - Separate your logic so that you can use your functions for another user button click of "Get Custom Data". Interact with an API of your choice and handle both success and error scenarios.
   - A lot of your local cities will have data open to the public with no API keys needed. Give those a try although it does take a bit of Googling. Examples:
     - New York Leading Cause of Death data: `https://data.cityofnewyork.us/api/views/jb7j-dtam/rows.json`
     - Los Angeles Crime data: `https://data.lacity.org/resource/63jg-8b9z.json`
     - Any listed here: https://cfpb.github.io/api/ccdb/api.html
-      - but you need to prefix with "https://cors-anywhere.herokuapp.com/"
+      - but you need to prefix with "https://cors.bridged.cc/"
     - Any listed here: https://jsonplaceholder.typicode.com/guide/
 
 ---

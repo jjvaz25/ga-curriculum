@@ -1,6 +1,6 @@
 /*
 
-- In the index.html file there is a "Get Consumer Finance Data" button. When the user clicks the button, pull data from the provided link above (https://cors-anywhere.herokuapp.com/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/). Handle the link success and error responses accordingly, displaying results in
+- In the index.html file there is a "Get Consumer Finance Data" button. When the user clicks the button, pull data from the provided link above (https://cors.bridged.cc/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/). Handle the link success and error responses accordingly, displaying results in
 console.log() if successful.
 
 - Separate your logic so that you can use your functions for another user button
@@ -10,7 +10,7 @@ success and error scenarios.
 Other data sources:
 - leading causes of death in new york: https://data.cityofnewyork.us/api/views/jb7j-dtam/rows.json
 - Any listed here: https://cfpb.github.io/api/ccdb/api.html
-  - but you need to prefix with "https://cors-anywhere.herokuapp.com/"
+  - but you need to prefix with to avoid CORS issues "https://cors.bridged.cc/"
 - Any listed here: https://jsonplaceholder.typicode.com/guide/
 
 */
