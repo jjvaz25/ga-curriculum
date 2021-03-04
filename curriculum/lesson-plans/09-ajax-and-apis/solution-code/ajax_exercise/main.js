@@ -39,7 +39,7 @@ const onLoadHandler = () => {
   // vanilla js
   document.getElementById('getDataButton').addEventListener('click', (evt) => {
     console.log('making request');
-    makeRequest('https://cors-anywhere.herokuapp.com/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/');
+    makeRequest('https://cors.bridged.cc/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/');
   });
 
   document.getElementById('getCustomDataButton').addEventListener('click', (evt) => {
@@ -50,7 +50,7 @@ const onLoadHandler = () => {
   // jquery
   // $('#getDataButton').on('click', (evt) => {
   //   console.log('making consumer finance request');
-  //   makeRequest('https://cors-anywhere.herokuapp.com/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/');
+  //   makeRequest('https://cors.bridged.cc/https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/');
   // });
 
   // $('#getCustomDataButton').on('click', (evt) => {
