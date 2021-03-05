@@ -322,6 +322,20 @@ Let's bring it all together. Open the [main.js](starter-code/weather/main.js) fi
   - Bonus 1: add a form prompting user for the city and state.
   - Bonus 2: convert answer from kelvin to fahrenheit.
 
+
+## Pokemon: Independent Practice (30 min)
+
+Create a webpage that displays various Pokemon data. Lets work on retrieving the data using `fetch` and displaying it on our DOM. If you are familiar with Pokemon, lets think of this as creating a Pokedex style app.
+
+* Display Name
+* Display Abilities
+* Display Types
+* Display Weight
+* Display Sprite/Image
+
+**Stretch Goal**
+* Display Evolutions if any
+
 ---
 <a name = "conclusion"></a>
 ## Conclusion (5 min)
