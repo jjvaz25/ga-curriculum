@@ -76,7 +76,7 @@ In this scenario setTimeout is taking a function as its first parameter, and the
 ```js
   let blastOff = function() {
     console.log("Blasting off!");
-  }
+  };
 
   function launchRocket(rocketName, blastOffCallback) {
     console.log("Launching " + rocketName);
@@ -122,7 +122,7 @@ Just as we can pass functions as arguments to other functions, we can also retur
 ```js
   let blastOff = function(destination) {
     console.log("Blasting off for " + destination + "!");
-  }
+  };
 
   function makeRocketLauncher(rocketName, blastOffCallback) {
     return function() {
@@ -187,7 +187,7 @@ Note that you don't have to pass anonymous functions as callbacks in cases like 
 
   let sayBye = function() {
     console.log("Goodbye world");
-  }
+  };
 
   setTimeout(sayHi, 1000 );
   setTimeout(sayBye, 1261440000000);
@@ -200,7 +200,7 @@ Note that you don't have to pass anonymous functions as callbacks in cases like 
 ```js
   setTimeout(function timer(){
     console.log( "Hello world" );
-  }, 1000 );
+  }, 1000);
 ```
 
 **Invoking Function Expressions Immediately**
@@ -210,41 +210,37 @@ We have the ability to execute our function expressions as soon as they are decl
 Let's slowly build up to this idea.
 
 ```js
-  const executeInIsolation = (doMyStuff) => {
+  const executeInIsolation = (callbackFunc) => {
     // every variable and function we define here is not in global scope
-    doMystuff();
+    callbackFunc();
   };
 
-  const doMyStuff = () => { console.log('doing my stuff'); };
+  const noCalls = () => { console.log('just vibes'); };
 
-  executeInIsolation(doMyStuff);
+  executeInIsolation(noCalls);
 ```
 
 Just how we can define a function inline for `addEventListener` or `.map`, we can define a function and then immediately execute it.
 
 ```js
-  const doMyStuff = () => { console.log('doing my stuff'); };
+  const noCalls = () => { console.log('just vibes'); };
 
-  ((doMyStuff) => {
-    doMyStuff();
-  })(doMyStuff);
+  ((callbackFunc) => {
+    callbackFunc();
+  })(noCalls);
 ```
 
-But we can simplify this futher. Do we really need to pass in `doMyStuff`?
+But we can simplify this futher. Do we really need to pass in `noCalls`?
 
 ```js
-const doMyStuff = () => { console.log('doing my stuff'); };
-
-(() => {
-  doMyStuff();
-})();
+const noCalls = (() => { console.log('just vibes'); })();
 ```
 
 Do we have to invoke a function or can we do anything there?
 
 ```js
 (() => {
-  console.log('doing my stuff');
+  console.log('just vibes');
 })();
 ```
 
@@ -268,12 +264,12 @@ Compare these 2 examples, they do the same things but one uses an IIFE
 WithOUT an IIFE:
 ```js
 const moduleBuilder = () => {
-  const _private1 = 'shhh! dont allow direct access';
-  const _private2 = 'this cant be accessed directly either';
+  const private1 = 'shhh! dont allow direct access';
+  const private2 = 'this cant be accessed directly either';
 
   return {
     getPrivate1: function() {
-      return _private1;
+      return private1;
     }
   };
 };
@@ -285,12 +281,12 @@ myModule.getPrivate1();
 With an IIFE:
 ```js
 const myModule = (function() {
-  const _private1 = 'shhh! dont allow direct access';
-  const _private2 = 'this cant be accessed directly either';
+  const private1 = 'shhh! dont allow direct access';
+  const private2 = 'this cant be accessed directly either';
 
   const exports = {
     getPrivate1: function() {
-      return _private1;
+      return private1;
     }
   };
 
@@ -343,7 +339,7 @@ Then lets see some things we have worked with recently in the browser, lets try 
 
 In this codealong, we will create a basic web scraper using packages from `npm`. We will make HTTP requests using Node. The only issue now though, `fetch` is not available to us in Node so we have to install a package such as `node-fetch` or `axios`. Remember the browser is different than Node. Both will be able to run basic Javascript but Node will not always have everything a browser will have such as DOM related things. Remember Javascript plays different roles when used on the browser and on a server.
 
-We will use 2 packages called `node-fetch` and `cheerio`. `node-fetch` will allow us to grap data from sites and `cheerio` acts like a jQuery type of library where it allows for DOM manipulation in Node.
+We will use 2 packages called `node-fetch` and `cheerio`. `node-fetch` will allow us to grap data from APIs and `cheerio` acts like a jQuery type of library where it allows for DOM like manipulation in Node.
 * [`node-fetch`](https://www.npmjs.com/package/node-fetch)
 * [`cheerio`](https://www.npmjs.com/package/cheerio)
 
@@ -483,7 +479,9 @@ const myModule2 = require('./modules/module2');
 <a name = "frontend"></a>
 ## Node vs Frontend (10 mins)
 
-Keep in mind we just did all this through Node. We actually don't have access to modules on the Frontend (browsers). We would need a JavaScript library or framework that enable module usage (for example, CommonJS, RequireJS, and more recently Webpack and Babel).
+JavaScript programs started off pretty small — most of its usage in the early days was to do isolated scripting tasks, providing a bit of interactivity to your web pages where needed, so large scripts were generally not needed. Fast forward a few years and we now have complete applications being run in browsers with a lot of JavaScript, as well as JavaScript being used in other contexts (Node.js, for example).
+
+It has therefore made sense in recent years to start thinking about providing mechanisms for splitting JavaScript programs up into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and frameworks that enable module usage (for example, other CommonJS and AMD-based module systems like RequireJS, and more recently Webpack and Babel). [More on JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 
 ## Frontend ES6 Modules
 
@@ -525,8 +523,22 @@ Make sure class objectives have been met.
 1. Install `http-server` with `npm install -g http-server` (or elect to use repl.it)
 2. Create a new directory for your files
 3. Create an `index.html` and an `index.js`. Make sure to have a `script` tag with a `src` referencing `index.js` in your `index.html` file. The script tag must have `type="module"` for this to work.
-4. Create a `module.js` file as well. Inside this file include a function that logs "Hello World" to the console and remember to `export` this function. `import` this function into `index.js` and invoke it. You should see "Hello World" in your console. Do not add `module.js` to `index.html` with another `script` tag. 
-5. If you are working off your machine (and not repl.it), navigate to your project directory in the command line and run `http-server`. It will display the URL and port where you can see your page. You'll have to stop and start this anytime you make changes.
+```html
+<script type="module" src="index.js"></script>
+```
+4. Create a `module.js` file as well. Inside this file include a function that logs `"Hello World"` to the console and remember to `export` this function. 
+```js
+export const module1 = () => {
+  return 'Hello World';
+};
+```
+5. `import` this function into `index.js` and invoke it. You should see `"Hello World"` in your console. Do not add `module.js` to `index.html` with another `script` tag. 
+```js
+import { module1 } from './src/module1.js';
+
+console.log(module1());
+```
+6. If you are working off your machine (and not repl.it), navigate to your project directory in the command line and run `http-server`. It will display the URL and port where you can see your page. You'll have to stop and start this anytime you make changes.
 
 ## Bonus(Optional): Frontend ES6 Modules with Parcel
 
@@ -551,8 +563,10 @@ axios.get('https:pokemon//pokeapi.co/api/v2/').then((data) => console.log(data))
 - [Brief intro to callbacks][2]
 - [Demystifying JavaScript Closures, Callbacks and IIFEs][3]
 - [More in-depth article on callbacks][4]
+- [ECMAScript][5]
 
 [1]: http://helephant.com/2008/08/19/functions-are-first-class-objects-in-javascript/
 [2]: http://www.impressivewebs.com/callback-functions-javascript/
 [3]: http://www.sitepoint.com/demystifying-javascript-closures-callbacks-iifes/
 [4]: http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
+[5]: https://en.wikipedia.org/wiki/ECMAScript
