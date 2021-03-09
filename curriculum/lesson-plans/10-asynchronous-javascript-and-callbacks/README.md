@@ -100,7 +100,7 @@ Callback functions can also take arguments, even though we don't specify the nee
 ```js
   let blastOff = function(destination) {
     console.log("Blasting off for " + destination + "!");
-  }
+  };
 
   function launchRocket(rocketName, blastOffCallback) {
     console.log("Launching " + rocketName);
@@ -129,7 +129,7 @@ Just as we can pass functions as arguments to other functions, we can also retur
       console.log("Launching " + rocketName);
       console.log("3... 2... 1...");
       blastOffCallback("Mars");
-    };
+    }
   }
 
   let launchViking = makeRocketLauncher("Viking", blastOff);
