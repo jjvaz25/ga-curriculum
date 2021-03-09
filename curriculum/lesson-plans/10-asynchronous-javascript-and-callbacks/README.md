@@ -45,7 +45,7 @@ Although we have used asynchronous programming in our code, we have not discusse
 We have worked with numerous scenarios where we have run a block of code after a user has performed an action. Take the following scenario from our DOM and jQuery continued lesson:
 
 ```js
-  var $thingList = $('#fav-list');
+  let $thingList = $('#fav-list');
 
   $thingList.on('mouseleave', 'li', function(e) {
     ...
