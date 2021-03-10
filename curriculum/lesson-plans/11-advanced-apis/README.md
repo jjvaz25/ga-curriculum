@@ -116,7 +116,7 @@ A good place to start when working with the documentation for the first time is 
 We learn right away that we'll need an API key. Let's set that up: https://www.flickr.com/services/apps/create/ .
 
 <a name = "lab1"></a>
-## Choosing an API endpoint: Practice (110 min)
+## Choosing an API endpoint: Practice (100 min)
 
 In pairs, review the documentation here: https://www.flickr.com/services/api/ . See if you can find the endpoint we can use to search photos for a specific user location. Take a look at the various request parameters and take note of ones that might important for our app.
 
@@ -161,6 +161,8 @@ const params = {
 // add query string to URL
 url.search = new URLSearchParams(params).toString();
 
+// same as writing the url above
+// let url = `https://www.flickr.com/services/rest/?lat=${latitude}&lon=${longitude}&method=flickr.photos.search&api_key=${flickrApiKey}&media=photos&tags=landscape&format=json&extras=url_n&content_type=1&safe_search=1&nojsoncallback=1`;
 // fetch resource
 const rawResponse = await fetch(url);
 
