@@ -13,38 +13,58 @@ const handleError = (err, userMessage) => {
 };
 
 const retrievePhotosForLocation = async (latitude, longitude) => {
-  const url = new URL('https://www.flickr.com/services/rest/');
-  const params = {
-    lat: latitude,
-    lon: longitude,
-    method: 'flickr.photos.search',
-    api_key: flickrApiKey,
-    media: 'photos',
-    tags: 'landscape',
-    format: 'json',
-    extras: 'url_n',
-    content_type: 1,
-    safe_search: 1,
-    nojsoncallback: 1 // need this because we don't want jsonp
-  };
+  try {
+    const url = new URL('https://www.flickr.com/services/rest/');
+    const params = {
+      lat: latitude,
+      lon: longitude,
+      method: 'flickr.photos.search',
+      api_key: flickrApiKey,
+      media: 'photos',
+      tags: 'landscape',
+      format: 'json',
+      extras: 'url_n',
+      content_type: 1,
+      safe_search: 1,
+      nojsoncallback: 1 // need this because we don't want jsonp
+    };
 
-  // add query string to URL
-  url.search = new URLSearchParams(params).toString();
+    // add query string to URL
+    url.search = new URLSearchParams(params).toString();
+    console.log('url', url);
 
-  console.log('url', url)
-  // fetch resource
-  const rawResponse = await fetch(url);
+    // same as writing the url above
+    // let url = `https://www.flickr.com/services/rest/?lat=${latitude}&lon=${longitude}&method=flickr.photos.search&api_key=${flickrApiKey}&media=photos&tags=landscape&format=json&extras=url_n&content_type=1&safe_search=1&nojsoncallback=1`;
+    // fetch resource
+    const rawResponse = await fetch(url);
 
-  // if it's not ok, let's get out of here
-  if (!rawResponse.ok) {
-    throw new Error('failed to retrieve photos from Flickr API');
+    // if it's not ok, let's get out of here
+    if (!rawResponse.ok) {
+      throw new Error('failed to retrieve photos from Flickr API');
+    }
+
+    // transform response into JSON
+    const json = await rawResponse.json();
+
+    // return only photos
+    return json.photos.photo;
+  } catch (err) {
+    handleError(err, 'Failed to fetch Flickr images');
   }
 
-  // transform response into JSON
-  const json = await rawResponse.json();
+  // promises chain style fetch call
+  // return fetch(url)
+  //   .then(function(res) {
+  //     return res.json();
+  //   })
+  //   .then(function(data) {
+  //     console.log(data);
+  //     return data.photos.photo;;
+  //   })
+  //   .catch(function(err) {
+  //     console.log(err);
+  //   });
 
-  // return only photos
-  return json.photos.photo;
 };
 
 
