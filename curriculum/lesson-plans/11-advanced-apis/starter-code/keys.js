@@ -2,4 +2,4 @@
 // We are doing this so that we don't accidentally check API key into Github, 
 // ...where it might be found and abused by random strangers.
 
-export const flickrApiKey = 'b11773c88cbf10fa5380ee5e9d240a80';
+export const flickrApiKey = '';
