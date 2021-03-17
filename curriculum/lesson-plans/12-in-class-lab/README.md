@@ -41,12 +41,10 @@ You'll give the user the ability to pull from multiple news sources. Here is an 
 
 - [Reddit: https://www.reddit.com/top.json](https://www.reddit.com/top.json)
 
-Get started by opening up the [Unit 2 project starter code](../../projects/unit2/).
-
 
 ### Getting Started
 
-Begin by looking at the starter code [here](https://github.com/generalassembly-studio/JS-Unit-2-Project-Starter-Code). Make sure you have the starter code on local machine:
+Begin by looking at the starter code in the projects repo. Make sure you have the starter code on local machine:
 
 ```
 $ git pull upstream master
