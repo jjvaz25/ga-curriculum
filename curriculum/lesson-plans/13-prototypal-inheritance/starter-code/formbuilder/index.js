@@ -1,5 +1,5 @@
-import Form from './components/Form';
-import Input from './components/Input';
+import Form from './components/Form.js';
+import Input from './components/Input.js';
 
 const onLoadHandler = () => {
   const newInput = new Input('firstname', 'text', 'First Name');
