@@ -232,6 +232,10 @@ const swingMonkeyFromTree = (monkey) => {
   console.log(`${monkey.name} is swinging from tree to tree!`);
 };
 
+let george = buildMonkey('George');
+swingMonkeyFromTree(george);
+
+// 1 step further, creating multiple monkeys with .map()
 const monkeyNames = ['George', 'Bob', 'Susie'];
 const monkeys = monkeyNames.map(buildMonkey);
 
@@ -242,7 +246,7 @@ const sadMonkeys = monkeys.map((monkey) => {
   };
 });
 
-sadMonkeys.forEach((sadMonky) => {
+sadMonkeys.forEach((monkey) => {
   swingMonkeyFromTree(monkey);
 });
 ```
