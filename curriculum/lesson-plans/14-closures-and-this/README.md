@@ -383,9 +383,9 @@ Now that we know the ins-and-outs and quirks of scope & closure, how exactly is 
 Well, they can help us hide state by creating _modules_:
 
 ```js
-var car;
+let car;
 function carFactory(kind) {
-  var wheelCount, start;
+  let wheelCount, start;
   wheelCount = 4;
   start = function() {
     console.log('started the ' + wheelCount + ' wheel ' + kind + '.');
@@ -483,7 +483,7 @@ Perhaps the greatest benefit of using Arrow functions is with DOM-level methods 
 
 ```js
 // traditional function
-var obj = {
+let obj = {
     count : 10,
     doSomethingLater : function () {
         setTimeout(function() { // the function executes on the window scope
@@ -496,7 +496,7 @@ var obj = {
 obj.doSomethingLater(); // console prints "NaN", because the property "count" is not in the window scope.
 
 // arrow function
-var obj = {
+let obj = {
     count : 10,
     doSomethingLater : function() { // of course, arrow functions are not suited for methods
         setTimeout( () => { // since the arrow function was created within the "obj", it assumes the object's "this"
@@ -677,6 +677,12 @@ console.log(test());
 ```
 
 2. Make `console.log(test())` return `Aurelio De Rosa`
+
+#### Brainteasers Solution
+
+1. Context of a function is dependent on how a function is invoked, not how it's defined. For the first log, we execute `obj.prop.getFullName()` invoking `.getFullName()` upon the `prop` object, thereby setting the context of the function to `prop` and logging `prop`'s `fullName` property, `Aurelio De Rosa`. For the second log, `.getFullName()` is set to the variable `test` which is in declared in the context of the `window` object, similar to the first example we saw earlier. Hence, when `test` is called, the log returns the value of the `fullName` property of the `window` object, `John Doe`.
+
+2. `console.log(test.call(obj.prop))` or `console.log(test.apply(obj.prop))`
 
 ---
 
