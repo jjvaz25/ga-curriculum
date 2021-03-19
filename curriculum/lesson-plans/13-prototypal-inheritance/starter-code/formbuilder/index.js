@@ -7,24 +7,24 @@ const onLoadHandler = () => {
   document.getElementById('main').append(newInput.element);
 
   // Form
-  // const myFormTitle = 'My First Form';
-  // const myInputs = [
-  //   {
-  //     name: 'email',
-  //     type: 'email',
-  //     label: 'Email Address'
-  //   },
-  //   {
-  //     name: 'name',
-  //     type: 'text',
-  //     label: 'Full Name'
-  //   }
-  // ];
-  // const myOnSubmit = console.log;
-  // const myForm = new Form(myFormTitle, myInputs, myOnSubmit);
-
-  // // append form
-  // window.document.body.append(myForm.element);
+  const myFormTitle = 'My First Form';
+  const myInputs = [
+    {
+      name: 'email',
+      type: 'email',
+      label: 'Email Address'
+    },
+    {
+      name: 'name',
+      type: 'text',
+      label: 'Full Name'
+    }
+  ];
+  const myOnSubmit = console.log;
+  const myForm = new Form(myFormTitle, myInputs, myOnSubmit);
+  console.log(myForm);
+  // append form
+  window.document.body.append(myForm.element);
 };
 
 // Wait for DOM load

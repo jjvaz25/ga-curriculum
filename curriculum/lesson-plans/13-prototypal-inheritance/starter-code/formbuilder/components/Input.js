@@ -17,7 +17,7 @@ const Input = function(name, type, label) {
   // 4. add event listeners
   const inputElement = formGroup.querySelector('input');
 
-  // 5. append label and input to form group
+
 
   // standard props
   this.keystrokes = [];

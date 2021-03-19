@@ -11,6 +11,7 @@ const Form = function(title, inputs, onSubmit) {
   this.inputs = inputs.map((input) => {
     return new Input(input.name, input.type, input.label);
   });
+  console.log(this.inputs)
   
   // create form element
   const formElement = document.createElement('form');

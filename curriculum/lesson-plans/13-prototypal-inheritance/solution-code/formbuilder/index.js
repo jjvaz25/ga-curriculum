@@ -29,6 +29,11 @@ const onLoadHandler = () => {
       name: 'name',
       type: 'text',
       label: 'Full Name'
+    },
+    {
+      name: 'username',
+      type: 'text',
+      label: 'State user Name'
     }
   ];
   const myOnSubmit2 = console.log;
