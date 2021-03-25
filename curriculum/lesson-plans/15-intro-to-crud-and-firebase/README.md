@@ -47,7 +47,7 @@ This common app functionality dealing with data is known as CRUD (Create, Read, 
 <a name = "review"></a>
 ## A Little Review...A Lotta CRUD (10 min)
 
-Even though we have never explicitly covered the term CRUD in this course, we have covered some of the technical implementations of performing CRUD. Can you think of what we have learned in an earlier lesson that relates to an application's ability to create, read, update and delete data? If it is not apparent as of yet, take a step back to think about what we know is needed in order to "play" with data. If the term API comes to mind you're on the right track. Using our _Advanced APIs_ lesson as an example, when we wanted to get 500px's post data, we had to ping one of 500px's API endpoints to do so. But how exactly did we go about communicating with 500px's endpoint? Herein lies the answer to our original question of what technical feature we have already learned which is related to CRUD, and that is _HTTP_.
+Even though we have never explicitly covered the term CRUD in this course, we have covered some of the technical implementations of performing CRUD. Can you think of what we have learned in an earlier lesson that relates to an application's ability to create, read, update and delete data? If it is not apparent as of yet, take a step back to think about what we know is needed in order to "play" with data. If the term API comes to mind you're on the right track.
 
 When developing an application that deals with data, a developer must be able to communicate with the application program interface (API) using various HTTP methods. To better understand how the different HTTP methods we already know perform CRUD checkout at the following table:
 
@@ -102,7 +102,7 @@ So, without further ado, let's go ahead and get setup an application with Fireba
 Firebase is a Google product.
 
 1. Go to https://console.firebase.google.com and click add a project.
-2. Give your project a name. Something descriptive of what you are building would be nice. Today we are building a Korn Fan Site, so something indicating that would be best. You don't need Google Analytics for today's project but perhaps for a real one you would.
+2. Give your project a name. Something descriptive of what you are building would be nice. Today we are building a Message site. You don't need Google Analytics for today's project but perhaps for a real one you would.
 3. Click the Web icon (looks like: `</>`)
 4. Register your app. Yes, you need both an app and a project name. They can be the same. You don't need hosting.
 5. Copy and paste the configuration they show you somewhere safe. We'll need that later to connect.
@@ -229,7 +229,7 @@ For your final project, you might want to filter the results returned with a que
 [](images/firestore-query.png)
 
 For example:
-```
+```js
 // get only messages where votes are greater than 0. Sort by votes ascending.
 db.collection("messages")
   .where("votes", ">", 0)
