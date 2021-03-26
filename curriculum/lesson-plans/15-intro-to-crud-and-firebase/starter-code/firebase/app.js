@@ -45,11 +45,12 @@ const render = async () => {
   messages.forEach((messageItem, i) => {
     listContainer.innerHTML += `<td>${messageItem.message}</td>
         <td>
-          <i class="material-icons" class="upvote">thumb_up</i>
-          <i class="material-icons" class="downvote">thumb_down</i>
-          <i id="trash${i}" class="material-icons" class="delete" data-id=${messageItem.id}>delete</i>
+          <i class="material-icons upvote">thumb_up</i>
+          <i class="material-icons downvote">thumb_down</i>
+          <i id="trash${i}" class="material-icons delete" data-id=${messageItem.id}>delete</i>
         </td>`;
   });
+  addDeleteListeners();
 }
 
 function deleteMessage(id) {
@@ -57,6 +58,15 @@ function deleteMessage(id) {
   return db.collection('messages').doc(id).delete();
 }
 
+function addDeleteListeners() {
+  let deletes = document.querySelectorAll('.delete');
+  for (let i = 0; i < deletes.length; i++) {
+    deletes[i].addEventListener('click', async (e) => {
+      await deleteMessage(e.target.dataset.id)
+      render();
+    });
+  }
+}
 
 const onLoadHandler = async () => {
 
@@ -87,17 +97,8 @@ const onLoadHandler = async () => {
 
 
   // On first load
-  await render();
-
-
-  let deletes = document.querySelector('.delete');
-  console.log(deletes);
-  for (let i = 0; i < deletes.length; i++) {
-    document.getElementById(`#trash${i}`).addEventListener('click', async () => {
-      await deleteMessage(document.getElementById(`#trash${i}`).data.id)
-      render();
-    });
-  }
+  render();
+  addDeleteListeners();
 
 };
 
