@@ -129,17 +129,27 @@ Keep in mind this allows us to do more than just push up to GitHub Pages, we now
 
 For this next example, I recommend we copy the `/parcel` code folder out of our class repository since we will be using this folder for a GitHub repository. 
 
-1. Lets start by opening up the code [here](/starter-code/parcel)
+Lets start by opening up the code in `/starter-code` folder or your Project 2
+1. For Project 2 you will have to do a couple more steps. We need to run:
+
+```
+$ npm init
+```
 2. Lets install the dependencies that we need. You can see what packages we will be using in the `package.json` file.
+
 ```bash
 $ npm install
 ```
-  Lets also install `parcel-bundler` globally
+  Lets install `parcel-bundler` globally
   ```bash
   $ npm install -g parcel-bundler
   ```
+  Lets also install `dotenv`
+  ```bash
+  $ npm install dotenv
+  ```
 
-3. Create a `.env` for your local environment variables. And create your variables in the file:
+3. Create a `.env` in your base folder for your local environment variables. And create your variables in the file:
 ```
 API_KEY='YOUR_API_KEY'
 AUTH_DOMAIN='YOUR AUTH DOMAIN'
@@ -152,11 +162,30 @@ APP_ID='YOUR APP ID'
 You can reference these in your code with `process.env.YOUR_VAR`.
 
 4. You will see in the `package.json` file that there are some predefined `scripts`. These are needed to start our project locally:
+
+`/starter-code`
 ```json
 "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html"
   }
+```
+
+Project 2
+```json
+"main": "dist/index.js",
+	"targets": {
+		"main": {
+			"outputFormat": "esmodule"
+		}
+},
+"browserslist": [
+  "last 1 Chrome versions"
+],
+"scripts": {
+  "start": "parcel index.html",
+  "build": "parcel build index.html"
+}
 ```
 We can see our project run locally with:
 ```bash
@@ -165,9 +194,17 @@ $ npm start
 
 
 5. Lets get this ready for Github Pages. We'll need to make sure the production build of the project is in a `docs` folder in your project. One way to do this is with the following in your `scripts` in `package.json`:
+
+`/starter-code`
 ```json
 "start": "parcel src/index.html --out-dir docs",
 "build": "parcel build src/index.html --out-dir docs --public-url ./"
+```
+
+Project 2
+```json
+"start": "parcel index.html --out-dir docs",
+"build": "parcel build index.html --out-dir docs --public-url ./"
 ```
 
 6. Once we change those, we need to build our project:
@@ -175,7 +212,42 @@ $ npm start
 $ npm run build
 ```
 
-7. Enterprise General Assembly github accounts do not allow us to add secrets to repos. You'll need to use your own personal Github for the next steps. Lets commit and push up to our repository. 
+7. If you do not have a `.gitignore` file, please create one. Here is a generic one:
+```
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Cache for Parcel
+.cache
+
+# Env vars
+.env
+
+# Apple stuff
+.DS_Store
+
+# keys file
+/js/keys.js
+``` 
+
+
+8. Enterprise General Assembly github accounts do not allow us to add secrets to repos. You'll need to use your own personal Github for the next steps. Lets commit and push up to our repository. 
 ```bash
 $ git add -A
 $ git commit -m 'message'
@@ -183,9 +255,9 @@ $ git remote add origin <GITHUB URL>
 $ git push origin master
 ```
 
-8. Lets have our Github Page active. Go over to settings and GitHub Pages section. We'll want to set this to read from the `docs` directory. Should be the second option in the dropdown
+9. Lets have our Github Page active. Go over to settings and GitHub Pages section. We'll want to set this to read from the `docs` directory. Should be the second option in the dropdown
 
-9. We will want to add our keys for our firebase app in our repository. Add these as Secrets by going to Settings then Secrets, New Repository Secrets, then adding Environment secrets one at a time.
+10. We will want to add our keys for our firebase app in our repository or our api keys. Add these as Secrets by going to Settings then Secrets, New Repository Secrets, then adding Environment secrets one at a time.
 
 ---
 
