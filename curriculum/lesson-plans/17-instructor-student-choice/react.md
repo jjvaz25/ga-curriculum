@@ -121,7 +121,7 @@ Because the same input will always produce the same output, components are easil
 
 ## Exercise: Identifying Components
 
-* Break into groups of three and take a look at Facebook, Craigslist, Ebay, or a website of your choice. Identify the visual "components" the website is comprised of. Write it out or create a diagram with screenshots of the site.
+* Break into groups of three and take a look at Facebook, AirBnB, Nordstrom, Pinterest, Indeed or a website of your choice. Identify the visual "components" the website is comprised of. Write it out or create a diagram with screenshots of the site.
 
 As you're drawing this out, think about the following questions...
 * Where do you see "nested components"? Where do you not?
